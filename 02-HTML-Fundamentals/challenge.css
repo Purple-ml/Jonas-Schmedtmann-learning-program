@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+.container {
+  width: 825px;
+  margin: 30px auto;
+  border: 3px solid black;
+}
+/* USE CLASS TO STYLE EVERYTHINGG */
+/* use comments to define your work properly */
+
+h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+h2::before {
+  content: "SALE";
+  background-color: rgb(196, 60, 60);
+  color: white;
+  font-size: 15px;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: -30px;
+}
+p {
+  margin-bottom: 10px;
+}
+/* 825(parent-container width)-6(border widths)- 80px (intended margin (2)- 250(image))/2 */
+.prize {
+  font-size: 20px;
+  /* float: left; */
+}
+.shipping {
+  text-transform: uppercase;
+  color: #444;
+  font-size: 12px;
+  font-weight: bold;
+  /* float: right; */
+  /* margin-top: 8px; */
+  /* margin-bottom: 23px; */
+}
+.more-info:link,
+.more-info:visited {
+  color: black;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+}
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+
+  margin-bottom: 20px;
+}
+/*you have to write all webssites properly and mke sure they can easily be built upon*/
+ul {
+  list-style: square;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+li {
+  margin-bottom: 15px;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+button {
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-top: 3px solid black;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0;
+  padding: 15px;
+  border: none;
+}
+button:hover {
+  color: black;
+  background-color: white;
+}
+
+.child-div {
+  width: 20px;
+  height: 20px;
+  /* margin-right: 15px; */
+  background-color: #000;
+  /* display: inline-block; */
+}
+.yellow {
+  background-color: yellow;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.brown {
+  background-color: rgb(107, 75, 16);
+}
+.red {
+  background-color: rgb(173, 15, 15);
+}
+/* keep everything consistent */
+
+/* .article-img {
+  float: left; 
+   margin-right: 40px;
+} */
+.prize-container {
+  /* width: 240px; */
+  /* float: left; */
+  /* margin-right: 40px; */
+  flex: 1;
+  margin-top: 20px;
+}
+.pdetails-container {
+  /* width: 240px; */
+  /* float: left; */
+  /* flex:1 is used on indivdual containers 
+  unless you want all containers to be affected by it */
+  margin-top: 20px;
+  flex: 1;
+}
+.prize-shipping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-bottom: 10px; */
+}
+/* LEARN TO USE GOOD AND SENSIBLE CLASS NAMES */
+.parent-div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* .content-div {
+  display: flex;
+  gap: 40px;
+} */
+/* .product-description {
+  clear: both;
+} */
+/* KEEP YOUR CODE AS SIMPLE, CONCISEE AND CLEARRR AS POSSIBLE */
+/* use margin-right consistentli and margin bottom conssistently */
+/* to fix something first observe it rlship with its sibling elements */
+
+/* CSS GRID */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  align-items: start;
+  column-gap: 40px;
+}
+h2 {
+  grid-column: 1/-1;
+}
+button {
+  grid-column: 1/ -1;
+}

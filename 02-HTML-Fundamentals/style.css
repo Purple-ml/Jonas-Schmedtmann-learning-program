@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.main-header {
+  padding: 20px 40px;
+  /* margin-bottom: 50px; */
+  background-color: #f7f7f7;
+}
+
+nav {
+  font-size: 18px;
+}
+.post-header {
+  margin-bottom: 40px;
+}
+/* article {
+  margin-bottom: 40px;
+} */
+h1,
+h2,
+h3 {
+  color: #a118a1;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+/* all pseudo elements have a display of inline by default */
+h2::after {
+  content: "TOP";
+  background-color: yellow;
+  color: #000;
+  padding: 10px;
+  font-size: 20px;
+  display: inline-block;
+  position: absolute;
+  right: -25px;
+  top: -10px;
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+h4 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.code-img {
+  width: 100%;
+  height: auto;
+}
+p {
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+ul,
+ol {
+  margin-bottom: 20px;
+}
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+/*footer p {
+  font-size: 16px;
+}*/
+
+#author {
+  font-size: 18px;
+  font-style: italic;
+}
+#copyright {
+  font-size: 16px;
+}
+.related {
+  list-style: none;
+}
+aside {
+  border-top: 5px solid #a118a1;
+  border-bottom: 5px solid #a118a1;
+  padding: 40px 40px;
+  /* width: 500px; */
+  background-color: #f7f7f7;
+}
+li:first-child {
+  font-style: italic;
+}
+li:last-child {
+  font-weight: bold;
+}
+/* .related li:last-child {
+  font-weight: 100;
+} */
+/* li:nth-child(2) {
+  color: #261acc;
+} */
+
+a:link {
+  text-decoration: none;
+  color: #a118a1;
+}
+a:visited {
+  color: #a118a1;
+}
+a:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+a:active {
+  font-style: italic;
+  color: rgb(78, 5, 54);
+}
+button {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+nav a:link {
+  display: inline-block;
+  margin-right: 30px;
+}
+nav a:link:last-child {
+  margin-right: 0;
+}
+/* img is inline block */
+/* pseudo classes are written with one colon while pseudo elements are written with two */
+h1::first-letter {
+  font-style: normal;
+}
+/* adjascent sibling selector the elemnt directly under in the same parent element/container and is selected with plus sign */
+/* h3 + p::first-line {
+  color: rgb(202, 44, 71);
+} */
+/* be consistent with code types eg color either names or #s */
+
+/* FLOATS */
+/* .author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+h1 {
+  float: left;
+}
+nav {
+  float: right;
+}
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+article {
+  width: 825px;
+  float: left;
+}
+aside {
+  width: 300px;
+  float: right;
+}
+footer {
+  clear: both;
+} */
+
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+/* never forget the :link psudoclass */
+.related-link:link {
+  margin-bottom: 5px;
+  display: block;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: bold;
+}
+.related-author {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+/* FLEXBOX LAYOUTS */
+/* .row {
+  display: flex;
+  gap: 75px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+article {
+  flex: 1;
+  margin-bottom: 0;
+}
+aside {
+  flex: 0 0 300px;
+}
+footer {
+  background-color: #f7f7f7;
+  padding: 9px;
+} */
+/* FLEXBOX IS PERFECT FOR COMPONENT LAYOUTS THAT ARE 1 DEMENSIONAL
+IE ONLY ROWS OR COLUMNS */
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+.main-header {
+  grid-column: 1 / -1;
+}
+/* article {
+}
+aside {
+} */
+footer {
+  grid-column: 1/ -1;
+}
