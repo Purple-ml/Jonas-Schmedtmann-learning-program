@@ -36,7 +36,7 @@ body {
 .container {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 4.8rem;
 }
 
 .main-nav-list {
@@ -113,7 +113,8 @@ body {
   font-size: 2rem;
   border-radius: 9px;
   font-weight: 600;
-  transition: background-color 0.2s;
+  /* transition: background-color 0.2s; */
+  transition: all 0.2s;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -136,8 +137,29 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  padding-bottom: 2px;
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.2s;
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.center-text {
+  text-align: center !important;
+}
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
 }
 .grid {
   display: grid;
