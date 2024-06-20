@@ -98,6 +98,7 @@ body {
 .secondary-heading {
   font-size: 4.4rem;
   line-height: 1.2;
+  /* margin-bottom: 8rem; */
 }
 .tertiary-heading {
   font-size: 3rem;
@@ -164,14 +165,24 @@ body {
 .grid {
   display: grid;
   column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  row-gap: 8rem;
+  /*  64 96*/
+  /* margin-bottom: 8rem; */
 }
-
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
 .grid--2--cols {
   grid-template-columns: repeat(2, 1fr);
 }
 .grid--3--cols {
   grid-template-columns: repeat(3, 1fr);
+}
+.grid--4--cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid--center--v {
