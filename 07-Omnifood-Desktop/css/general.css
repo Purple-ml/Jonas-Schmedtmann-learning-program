@@ -105,7 +105,7 @@ body {
   line-height: 1.2;
   margin-bottom: 3.2rem;
 }
-
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -116,6 +116,21 @@ body {
   font-weight: 600;
   /* transition: background-color 0.2s; */
   transition: all 0.2s;
+
+  /* only necessary for .btn ie button tag */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #45260a;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -152,6 +167,10 @@ body {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+} */
 
 .center-text {
   text-align: center !important;
@@ -183,6 +202,9 @@ body {
 }
 .grid--4--cols {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid--5--cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center--v {
