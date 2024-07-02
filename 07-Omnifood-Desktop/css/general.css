@@ -20,6 +20,8 @@ html {
   to respect user sizing we convert to %
   10px/16px = 0.625 convert to percentage = 62.5%*/
   /* default is 16px*/
+  overflow-x: hidden;
+
   font-size: 62.5%;
 }
 * {
@@ -32,6 +34,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 .container {
   max-width: 130rem;

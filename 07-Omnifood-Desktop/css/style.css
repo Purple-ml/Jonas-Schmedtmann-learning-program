@@ -1,6 +1,7 @@
 .head {
   background-color: #fdf2e9;
   /* padding: 0 3.2rem; */
+  position: relative;
 }
 .header {
   display: flex;
@@ -25,19 +26,33 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* max-width: 130rem; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   align-items: center;
   gap: 9.6rem;
   /* padding: 0 4.8rem; */
 }
 .hero-img {
-  width: 100%;
+  width: 90%;
 }
 
 .hero-description {
   font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
+}
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  display: none;
+  cursor: pointer;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 .delivered-meals {
